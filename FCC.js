@@ -63,3 +63,17 @@ titleCase("I'm a little tea pot");
 //Split String based on space.
 //Iterate through array and upper case each word.
 //Join with a space.
+
+//Array of largest
+function largestOfFour(arr) {
+   var largest = [];
+
+   for (var i = 0; i < arr.length; i++) {
+     console.log(arr[i]);
+     largest.push(Math.max.apply(null, arr[i]));
+   }
+  console.log(largest);
+  return largest;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]])
