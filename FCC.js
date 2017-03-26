@@ -41,3 +41,25 @@ console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
 //Split on space
 //Iterate through the array and calculate each length and push to score array
 //Choose max number in that array.
+
+//Title Case Challengefunction titleCase(str) {
+  var newString = str.split(" ");
+
+  var upperCase = [];
+
+  for (var i = 0; i < newString.length; i++) {
+    upperCase.push(newString[i][0].toUpperCase() + newString[i].slice(1, newString[i].length));
+  }
+
+  upperCase = upperCase.join(" ");
+  console.log(upperCase);
+
+  return upperCase;
+}
+
+titleCase("I'm a little tea pot");
+
+
+//Split String based on space.
+//Iterate through array and upper case each word.
+//Join with a space.
