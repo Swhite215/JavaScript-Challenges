@@ -94,3 +94,14 @@ function confirmEnding(str, target) {
 }
 
 confirmEnding("Bastian", "n");
+
+//Repeat a String
+function repeatStringNumTimes(str, num) {
+  if (num > 0) {
+    return str.repeat(num);
+  } else {
+    return "";
+  }
+}
+
+repeatStringNumTimes("abc", 3);
