@@ -133,3 +133,33 @@ function slasher(arr, howMany) {
 }
 
 slasher([1, 2, 3], 2);
+
+//Mutations
+function mutation(arr) {
+
+  var splitOne = arr[0].split('');
+
+  lowerCase(splitOne);
+
+  var splitTwo = arr[1].split('');
+  var compareArray = [];
+
+  for (var i = 0; i <splitTwo.length; i++){
+      if (splitOne.indexOf(splitTwo[i].toLowerCase()) !== -1) {
+        compareArray.push(splitTwo[i]);
+        console.log(compareArray);
+      }
+  }
+
+  if(compareArray.length === splitTwo.length) {
+        return true;
+      } else {
+        return false;
+      }
+}
+
+function lowerCase(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].toLowerCase();
+  }
+}
