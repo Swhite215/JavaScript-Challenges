@@ -123,3 +123,13 @@ function truncateString(str, num) {
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 11);
+
+//Splice Practice
+
+function slasher(arr, howMany) {
+  arr.splice(0, howMany);
+  console.log(arr);
+  return arr;
+}
+
+slasher([1, 2, 3], 2);
