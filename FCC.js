@@ -163,3 +163,23 @@ function lowerCase(arr) {
     arr[i] = arr[i].toLowerCase();
   }
 }
+
+//Falsy Bouncer
+function bouncer(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    console.log(typeof arr[i]);
+  }
+  // Don't show a false ID to this bouncer.
+
+  var filtered = arr.filter(isNotFalsy);
+
+  console.log(filtered);
+
+  return filtered;
+}
+
+function isNotFalsy(value) {
+  if (value !== "" || value === true || value !== null || value !== 0 || value !== undefined || value !== isNaN) {
+    return value;
+  }
+}
