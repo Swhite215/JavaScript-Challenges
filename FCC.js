@@ -183,3 +183,37 @@ function isNotFalsy(value) {
     return value;
   }
 }
+
+//Seek and Destroy
+function destroyer(arr) {
+  var args = Array.prototype.slice.call(arguments);
+
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < args.length; j++) {
+      if (arr[i] === args[j]) {
+        delete arr[i];
+      }
+    }
+  }
+  return arr.filter(Boolean);
+}
+
+
+//Where do I belong?
+function getIndexToIns(arr, num) {
+  arr.push(num);
+  arr.sort(compareNumbers);
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === num) {
+      console.log(i);
+      return i;
+    }
+  }
+
+  function compareNumbers(a, b) {
+    console.log(a);
+    console.log(b);
+    return a - b;
+  }
+}
