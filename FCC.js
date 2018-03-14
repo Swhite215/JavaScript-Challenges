@@ -250,3 +250,22 @@ function createCipher(alphabetArray) {
 }
 
 rot13("AAAAAA");
+
+//Sum All Numbers in a Range
+function sumAll(arr) {
+  var maxNumber = Math.max(...arr);
+  var minNumber = Math.min(...arr);
+  var sum = 0;
+  
+  //console.log(maxNumber);
+  //console.log(minNumber);
+  for (var i = minNumber; i <= maxNumber; i++) {
+    //console.log(i);
+    sum += i;
+  }
+  
+  console.log(sum)
+  return sum;
+}
+
+sumAll([1, 4]);
