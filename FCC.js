@@ -217,3 +217,36 @@ function getIndexToIns(arr, num) {
     return a - b;
   }
 }
+
+//Caesar Cipher
+var standardAlphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var shiftNumber = 13;
+var cipherArray = createCipher(standardAlphabet);
+
+function rot13(str) { // LBH QVQ VG!
+  var brokenStringArray = str.split("");
+  
+  for (var i = 0; i < brokenStringArray.length; i++) {
+    if (standardAlphabet.indexOf(brokenStringArray[i]) >= 0) {
+      brokenStringArray[i] = cipherArray[standardAlphabet.indexOf(brokenStringArray[i])];
+    } else {
+      brokenStringArray[i] = brokenStringArray[i];
+      continue;
+    }
+  }
+  
+  var newString = brokenStringArray.join("");
+  return newString;
+}
+
+function createCipher(alphabetArray) {
+   var newArray = alphabetArray.slice();
+   for (var i = 0; i < shiftNumber; i++) {
+     var shiftingLetter = newArray.pop();
+     newArray.unshift(shiftingLetter);
+   }
+
+  return newArray;
+}
+
+rot13("AAAAAA");
